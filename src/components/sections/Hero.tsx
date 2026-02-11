@@ -12,6 +12,9 @@ const techBadges = [
   "Docker",
   "Kubernetes",
   "Home Assistant",
+  "Ubiquiti",
+  "Sonos",
+  "Control4",
 ];
 
 const stats = [
@@ -48,8 +51,8 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
             >
-              Expert IT Solutions{" "}
-              <GradientText>for the Modern Age</GradientText>
+              IT That Just Works.{" "}
+              <GradientText>Homes That Wow.</GradientText>
             </motion.h1>
 
             <motion.p
@@ -58,9 +61,9 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="mt-6 text-lg text-text-secondary max-w-lg"
             >
-              Enterprise-grade IT consulting for businesses and professional
-              home automation services. We design, implement, and support
-              technology that works.
+              We handle the tech so you don&apos;t have to. From bulletproof
+              business infrastructure to cinema-quality home theaters and
+              smart home setups — we make it effortless.
             </motion.p>
 
             <motion.div

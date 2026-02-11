@@ -13,6 +13,7 @@ const businessServices = [
 ];
 
 const homeServices = [
+  "Home Theater Buildout",
   "Ubiquiti Network Installation",
   "Home Assistant Setup",
   "Low Voltage Wiring",
@@ -80,9 +81,9 @@ export default function Services() {
                   <h3 className="text-2xl font-bold">Home Automation</h3>
                 </div>
                 <p className="text-text-secondary mb-8">
-                  Professional smart home integration with enterprise-grade
-                  networking. Turn your home into a seamlessly connected,
-                  automated environment.
+                  From immersive home theaters to fully automated smart homes,
+                  we bring enterprise-grade networking and seamless integration
+                  to every room in your house.
                 </p>
                 <ul className="space-y-4">
                   {homeServices.map((service) => (

@@ -17,17 +17,21 @@ export default function CTABanner() {
 
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4">
-                Ready to Transform Your IT?
+
+                Let&apos;s Build Something Great Together
               </h2>
               <p className="text-white/80 text-lg max-w-2xl mx-auto mb-8">
-                Let&apos;s discuss how we can streamline your infrastructure,
-                strengthen your security, and accelerate your growth.
+                Whether it&apos;s a dream home theater, a smarter home, or
+                rock-solid IT for your business — we&apos;d love to chat.
+                No pressure, just a friendly conversation about what&apos;s possible.
               </p>
               <a
-                href="#contact"
+                href="https://cal.com/itguys"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-background font-semibold px-8 py-4 rounded-lg hover:bg-white/90 transition-colors"
               >
-                Get Started Today
+                Book a Free Consultation
                 <ArrowRight size={18} />
               </a>
             </div>
