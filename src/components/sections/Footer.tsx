@@ -9,7 +9,7 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/meech-io", label: "GitHub" },
+  { icon: Github, href: "https://github.com/itguys-ai", label: "GitHub" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: Twitter, href: "#", label: "Twitter" },
 ];

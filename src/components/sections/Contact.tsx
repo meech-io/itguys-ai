@@ -160,7 +160,7 @@ export default function Contact() {
                   our calendar.
                 </p>
                 <a
-                  href="https://cal.com"
+                  href="https://cal.com/itguys"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-3 text-sm text-accent-purple hover:text-accent-blue transition-colors font-medium"
