@@ -2,7 +2,6 @@
 
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import ScrollReveal from "../ui/ScrollReveal";
-import SectionHeader from "../ui/SectionHeader";
 import Button from "../ui/Button";
 
 const contactInfo = [
@@ -32,18 +31,9 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 lg:py-32">
+    <section className="py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
-          <SectionHeader
-            label="Get in Touch"
-            title="Let's Start a"
-            gradientTitle="Conversation"
-            subtitle="Tell us about your project and we'll get back to you within 24 hours."
-          />
-        </ScrollReveal>
-
-        <div className="mt-16 grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-12">
           {/* Form */}
           <ScrollReveal direction="left" className="lg:col-span-3">
             <form

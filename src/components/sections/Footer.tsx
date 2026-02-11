@@ -1,11 +1,11 @@
+import Link from "next/link";
 import { Github, Linkedin, Twitter } from "lucide-react";
 
 const footerLinks = [
-  { label: "Home", href: "#" },
-  { label: "Services", href: "#services" },
-  { label: "Expertise", href: "#expertise" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const socialLinks = [
@@ -20,23 +20,23 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-1">
+          <Link href="/" className="flex items-center gap-1">
             <span className="text-lg font-bold text-text-primary tracking-tight">
               ITGuys
             </span>
             <span className="text-lg font-bold text-accent">.ai</span>
-          </a>
+          </Link>
 
           {/* Nav links */}
           <nav className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-sm text-text-secondary hover:text-text-primary transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 

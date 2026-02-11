@@ -71,10 +71,10 @@ export default function Hero() {
               transition={{ delay: 0.8 }}
               className="mt-8 flex flex-wrap gap-4"
             >
-              <Button href="#services">
+              <Button href="/services">
                 Explore Solutions
               </Button>
-              <Button variant="secondary" href="#contact">
+              <Button variant="secondary" href="/contact">
                 Get in Touch
                 <ArrowRight size={16} />
               </Button>

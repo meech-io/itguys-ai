@@ -1,6 +1,7 @@
 "use client";
 
 import { type ButtonHTMLAttributes, type ReactNode } from "react";
+import Link from "next/link";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
 
@@ -8,6 +9,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   children: ReactNode;
   href?: string;
+  external?: boolean;
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
@@ -23,16 +25,33 @@ export default function Button({
   variant = "primary",
   children,
   href,
+  external,
   className = "",
   ...props
 }: ButtonProps) {
   const classes = `inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all duration-300 cursor-pointer ${variantClasses[variant]} ${className}`;
 
   if (href) {
+    const isExternal =
+      external || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");
+
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <a href={href} className={classes}>
+      <Link href={href} className={classes}>
         {children}
-      </a>
+      </Link>
     );
   }
 
