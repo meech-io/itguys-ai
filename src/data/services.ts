@@ -172,12 +172,12 @@ export const businessServices: ServiceData[] = [
       "Scalable infrastructure that grows with you",
     ],
     technologies: [
-      "Cisco Meraki",
       "Arista",
       "Palo Alto",
       "Ubiquiti",
       "Fortinet",
       "Aruba",
+      "Cisco Meraki",
       "VXLAN",
     ],
     cta: {
