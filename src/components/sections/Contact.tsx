@@ -9,7 +9,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Address",
-    value: "Los Angeles, CA",
+    value: "San Francisco, CA",
   },
   {
     icon: Phone,
