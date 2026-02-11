@@ -34,7 +34,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <SectionHeader
-            label="// client stories"
+            label="Client Stories"
             title="What Our Clients"
             gradientTitle="Say"
             subtitle="Trusted by businesses of all sizes to deliver exceptional IT solutions."
@@ -43,15 +43,15 @@ export default function Testimonials() {
 
         <div className="mt-16 grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, i) => (
-            <ScrollReveal key={testimonial.name} delay={i * 0.15}>
-              <div className="relative bg-surface border border-border rounded-2xl p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent-purple/30 hover:shadow-lg hover:shadow-accent-purple/5 h-full flex flex-col">
+            <ScrollReveal key={testimonial.name} delay={i * 0.12}>
+              <div className="relative bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:-translate-y-0.5 hover:border-border-light hover:shadow-lg hover:shadow-black/20 h-full flex flex-col">
                 {/* Stars */}
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-5">
                   {Array.from({ length: testimonial.rating }).map((_, j) => (
                     <Star
                       key={j}
-                      size={16}
-                      className="text-accent-blue fill-accent-blue"
+                      size={14}
+                      className="text-accent fill-accent"
                     />
                   ))}
                 </div>
@@ -62,12 +62,12 @@ export default function Testimonials() {
                 </p>
 
                 {/* Author */}
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-blue to-accent-purple flex items-center justify-center text-white font-bold text-sm">
+                <div className="mt-6 pt-6 border-t border-border flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center text-accent font-semibold text-sm">
                     {testimonial.name.charAt(0)}
                   </div>
                   <div>
-                    <div className="font-semibold text-sm">
+                    <div className="font-medium text-sm text-text-primary">
                       {testimonial.name}
                     </div>
                     <div className="text-text-muted text-xs">

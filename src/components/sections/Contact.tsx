@@ -8,8 +8,8 @@ import Button from "../ui/Button";
 const contactInfo = [
   {
     icon: MapPin,
-    label: "Address",
-    value: "San Francisco, CA",
+    label: "Service Area",
+    value: "San Francisco Bay Area",
   },
   {
     icon: Phone,
@@ -36,7 +36,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <SectionHeader
-            label="// get in touch"
+            label="Get in Touch"
             title="Let's Start a"
             gradientTitle="Conversation"
             subtitle="Tell us about your project and we'll get back to you within 24 hours."
@@ -58,7 +58,7 @@ export default function Contact() {
                   <input
                     type="text"
                     placeholder="John Doe"
-                    className="w-full bg-surface border border-border rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-purple focus:ring-1 focus:ring-accent-purple/50 transition-colors"
+                    className="w-full bg-surface border border-border rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/30 transition-colors"
                   />
                 </div>
                 <div>
@@ -68,7 +68,7 @@ export default function Contact() {
                   <input
                     type="email"
                     placeholder="john@company.com"
-                    className="w-full bg-surface border border-border rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-purple focus:ring-1 focus:ring-accent-purple/50 transition-colors"
+                    className="w-full bg-surface border border-border rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/30 transition-colors"
                   />
                 </div>
               </div>
@@ -81,14 +81,14 @@ export default function Contact() {
                   <input
                     type="tel"
                     placeholder="(555) 000-0000"
-                    className="w-full bg-surface border border-border rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-purple focus:ring-1 focus:ring-accent-purple/50 transition-colors"
+                    className="w-full bg-surface border border-border rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/30 transition-colors"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-text-secondary mb-2">
                     Service Interest
                   </label>
-                  <select className="w-full bg-surface border border-border rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-purple focus:ring-1 focus:ring-accent-purple/50 transition-colors">
+                  <select className="w-full bg-surface border border-border rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/30 transition-colors">
                     <option value="">Select a service</option>
                     <option value="business-it">Business IT Solutions</option>
                     <option value="home-automation">Home Automation</option>
@@ -106,7 +106,7 @@ export default function Contact() {
                 <textarea
                   rows={5}
                   placeholder="Tell us about your project..."
-                  className="w-full bg-surface border border-border rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-purple focus:ring-1 focus:ring-accent-purple/50 transition-colors resize-none"
+                  className="w-full bg-surface border border-border rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/30 transition-colors resize-none"
                 />
               </div>
 
@@ -119,20 +119,20 @@ export default function Contact() {
           {/* Contact info */}
           <ScrollReveal direction="right" className="lg:col-span-2">
             <div className="bg-surface border border-border rounded-2xl p-8 h-full">
-              <h3 className="text-xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
               <div className="space-y-6">
                 {contactInfo.map((info) => {
                   const Icon = info.icon;
                   const content = (
                     <div className="flex items-start gap-4">
                       <div className="p-2.5 bg-elevated rounded-lg flex-shrink-0">
-                        <Icon size={18} className="text-accent-purple" />
+                        <Icon size={18} className="text-accent" />
                       </div>
                       <div>
                         <div className="text-sm text-text-muted mb-0.5">
                           {info.label}
                         </div>
-                        <div className="text-text-primary font-medium">
+                        <div className="text-text-primary font-medium text-sm">
                           {info.value}
                         </div>
                       </div>
@@ -154,22 +154,22 @@ export default function Contact() {
                 })}
               </div>
 
-              {/* Map */}
+              {/* Map - Bay Area from Santa Rosa to San Jose, Fairfield to Brentwood */}
               <div className="mt-6 rounded-xl overflow-hidden border border-border">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201879.68471676828!2d-122.57748!3d37.7576793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%20Bay%20Area%2C%20CA!5e0!3m2!1sen!2sus!4v1"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d420000!2d-122.15!3d37.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1"
                   width="100%"
-                  height="180"
-                  style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
+                  height="200"
+                  style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) saturate(0.3)" }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Bay Area map"
+                  title="Bay Area service area"
                 />
               </div>
 
               <div className="mt-6 pt-6 border-t border-border">
-                <p className="text-sm text-text-secondary">
+                <p className="text-sm text-text-secondary leading-relaxed">
                   Prefer to schedule a call? Book a free consultation through
                   our calendar.
                 </p>
@@ -177,7 +177,7 @@ export default function Contact() {
                   href="https://cal.com/itguys"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-3 text-sm text-accent-purple hover:text-accent-blue transition-colors font-medium"
+                  className="inline-flex items-center gap-2 mt-3 text-sm text-accent hover:text-accent-light transition-colors font-medium"
                 >
                   Book a Consultation →
                 </a>

@@ -18,7 +18,6 @@ const expertiseAreas = [
     description:
       "Enterprise identity and access management with SSO, MFA, and lifecycle automation. Secure your workforce with zero-trust identity.",
     techs: ["Okta", "SAML", "SCIM", "OAuth"],
-    color: "accent-blue",
   },
   {
     icon: Network,
@@ -26,7 +25,6 @@ const expertiseAreas = [
     description:
       "Design and deploy robust network architectures with SD-WAN, zero-trust segmentation, and enterprise-grade wireless solutions.",
     techs: ["Cisco Meraki", "Palo Alto", "Ubiquiti", "Zero Trust"],
-    color: "accent-cyan",
   },
   {
     icon: Cloud,
@@ -34,7 +32,6 @@ const expertiseAreas = [
     description:
       "Cloud architecture, migration, and optimization on AWS. From VPC design to serverless workloads, we build scalable cloud foundations.",
     techs: ["EC2", "Lambda", "CloudFormation", "IAM"],
-    color: "accent-purple",
   },
   {
     icon: GitBranch,
@@ -42,7 +39,6 @@ const expertiseAreas = [
     description:
       "Streamline your development pipeline with infrastructure as code, container orchestration, and automated deployment workflows.",
     techs: ["Terraform", "Docker", "Kubernetes", "GitHub Actions"],
-    color: "accent-magenta",
   },
   {
     icon: Activity,
@@ -50,7 +46,6 @@ const expertiseAreas = [
     description:
       "Full-stack observability with proactive alerting, performance monitoring, and incident response automation.",
     techs: ["Datadog", "New Relic", "Grafana", "PagerDuty"],
-    color: "accent-blue",
   },
   {
     icon: Lock,
@@ -58,7 +53,6 @@ const expertiseAreas = [
     description:
       "Comprehensive security posture management including vulnerability assessments, compliance frameworks, and security awareness.",
     techs: ["SOC 2", "HIPAA", "Pen Testing", "SIEM"],
-    color: "accent-cyan",
   },
 ];
 
@@ -68,7 +62,7 @@ export default function Expertise() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <SectionHeader
-            label="// our expertise"
+            label="Our Expertise"
             title="Technical"
             gradientTitle="Excellence"
             subtitle="Deep expertise across modern infrastructure, security, and automation technologies."
@@ -79,14 +73,12 @@ export default function Expertise() {
           {expertiseAreas.map((area, i) => {
             const Icon = area.icon;
             return (
-              <ScrollReveal key={area.title} delay={i * 0.1}>
-                <div className={`group relative bg-surface border border-border rounded-2xl p-6 transition-all duration-500 hover:-translate-y-1 hover:border-${area.color}/50 hover:shadow-lg hover:shadow-${area.color}/10 h-full`}>
-                  <div
-                    className={`inline-flex p-3 rounded-lg bg-${area.color}/10 mb-4`}
-                  >
-                    <Icon className={`text-${area.color}`} size={24} />
+              <ScrollReveal key={area.title} delay={i * 0.08}>
+                <div className="group relative bg-surface border border-border rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-border-light hover:shadow-lg hover:shadow-black/20 h-full">
+                  <div className="inline-flex p-3 rounded-lg bg-accent/10 mb-4">
+                    <Icon className="text-accent" size={22} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{area.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3">{area.title}</h3>
                   <p className="text-text-secondary text-sm leading-relaxed mb-4">
                     {area.description}
                   </p>

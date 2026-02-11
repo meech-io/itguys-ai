@@ -17,16 +17,14 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="h-px bg-gradient-to-r from-transparent via-accent-purple to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-0.5">
-            <span className="text-xl font-extrabold text-accent-blue">IT</span>
-            <span className="text-xl font-extrabold text-accent-purple">
-              Guys
+          <a href="#" className="flex items-center gap-1">
+            <span className="text-lg font-bold text-text-primary tracking-tight">
+              ITGuys
             </span>
-            <span className="text-xl font-extrabold text-text-muted">.ai</span>
+            <span className="text-lg font-bold text-accent">.ai</span>
           </a>
 
           {/* Nav links */}

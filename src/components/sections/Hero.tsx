@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Button from "../ui/Button";
-import GradientText from "../ui/GradientText";
 
 const techBadges = [
   "AWS",
@@ -25,41 +24,41 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
-      {/* Background glow */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-accent-blue/10 rounded-full blur-[120px] animate-glow-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent-purple/10 rounded-full blur-[120px] animate-glow-pulse [animation-delay:1.5s]" />
-      </div>
+    <section className="relative min-h-screen flex items-center pt-16">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-surface/50" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left content */}
           <div>
-            <motion.span
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-block font-mono text-sm text-text-muted mb-6"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-surface/50 mb-8"
             >
-              // modern it consulting
-            </motion.span>
+              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+              <span className="text-xs font-medium text-text-secondary tracking-wide uppercase">
+                Modern IT Consulting
+              </span>
+            </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight"
             >
               IT That Just Works.{" "}
-              <GradientText>Homes That Wow.</GradientText>
+              <span className="text-accent">Homes That Wow.</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mt-6 text-lg text-text-secondary max-w-lg"
+              className="mt-6 text-lg text-text-secondary max-w-lg leading-relaxed"
             >
               We handle the tech so you don&apos;t have to. From bulletproof
               business infrastructure to cinema-quality home theaters and
@@ -73,12 +72,11 @@ export default function Hero() {
               className="mt-8 flex flex-wrap gap-4"
             >
               <Button href="#services">
-                <Zap size={18} />
                 Explore Solutions
               </Button>
               <Button variant="secondary" href="#contact">
                 Get in Touch
-                <ArrowRight size={18} />
+                <ArrowRight size={16} />
               </Button>
             </motion.div>
 
@@ -86,14 +84,14 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
-              className="mt-12 flex gap-8"
+              className="mt-14 flex gap-10"
             >
-              {stats.map((stat) => (
-                <div key={stat.label}>
+              {stats.map((stat, i) => (
+                <div key={stat.label} className={i > 0 ? "border-l border-border pl-10" : ""}>
                   <div className="text-2xl font-bold text-text-primary">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-text-muted">{stat.label}</div>
+                  <div className="text-sm text-text-muted mt-0.5">{stat.label}</div>
                 </div>
               ))}
             </motion.div>
@@ -101,20 +99,20 @@ export default function Hero() {
 
           {/* Right - tech badge grid */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="hidden lg:grid grid-cols-3 gap-4"
+            className="hidden lg:grid grid-cols-3 gap-3"
           >
             {techBadges.map((badge, i) => (
               <motion.div
                 key={badge}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 + i * 0.1 }}
-                className="group relative bg-surface/80 backdrop-blur border border-border rounded-xl p-6 text-center hover:border-accent-purple/50 hover:shadow-lg hover:shadow-accent-purple/10 transition-all duration-500 hover:-translate-y-1"
+                transition={{ delay: 0.8 + i * 0.08 }}
+                className="bg-surface border border-border rounded-xl p-5 text-center hover:border-border-light transition-all duration-300 hover:-translate-y-0.5"
               >
-                <span className="font-mono text-sm text-text-secondary group-hover:text-accent-purple transition-colors">
+                <span className="font-mono text-sm text-text-secondary">
                   {badge}
                 </span>
               </motion.div>

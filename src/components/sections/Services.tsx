@@ -28,10 +28,10 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="font-mono text-sm text-text-muted tracking-wider uppercase">
-              // what we do
+            <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-accent">
+              What We Do
             </span>
-            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-extrabold">
+            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
               Our Services
             </h2>
           </div>
@@ -40,16 +40,16 @@ export default function Services() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Business IT Card */}
           <ScrollReveal direction="left">
-            <div className="relative bg-surface border border-border rounded-2xl overflow-hidden group hover:border-accent-cyan/30 transition-all duration-500">
-              <div className="h-1 bg-gradient-to-r from-accent-blue to-accent-cyan" />
+            <div className="relative bg-surface border border-border rounded-2xl overflow-hidden hover:border-border-light transition-all duration-300">
+              <div className="h-px bg-accent/40" />
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-2.5 bg-accent-blue/10 rounded-lg">
-                    <Building2 className="text-accent-cyan" size={24} />
+                  <div className="p-2.5 bg-accent/10 rounded-lg">
+                    <Building2 className="text-accent" size={22} />
                   </div>
-                  <h3 className="text-2xl font-bold">Business IT Solutions</h3>
+                  <h3 className="text-2xl font-semibold">Business IT Solutions</h3>
                 </div>
-                <p className="text-text-secondary mb-8">
+                <p className="text-text-secondary mb-8 leading-relaxed">
                   Enterprise-grade infrastructure, security, and support
                   tailored to your business needs. From startups to established
                   companies, we&apos;ve got you covered.
@@ -58,10 +58,10 @@ export default function Services() {
                   {businessServices.map((service) => (
                     <li key={service} className="flex items-center gap-3">
                       <Check
-                        size={18}
-                        className="text-accent-cyan flex-shrink-0"
+                        size={16}
+                        className="text-accent flex-shrink-0"
                       />
-                      <span className="text-text-primary">{service}</span>
+                      <span className="text-text-primary text-sm">{service}</span>
                     </li>
                   ))}
                 </ul>
@@ -71,16 +71,16 @@ export default function Services() {
 
           {/* Home Automation Card */}
           <ScrollReveal direction="right">
-            <div className="relative bg-surface border border-border rounded-2xl overflow-hidden group hover:border-accent-magenta/30 transition-all duration-500">
-              <div className="h-1 bg-gradient-to-r from-accent-purple to-accent-magenta" />
+            <div className="relative bg-surface border border-border rounded-2xl overflow-hidden hover:border-border-light transition-all duration-300">
+              <div className="h-px bg-accent/40" />
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-2.5 bg-accent-purple/10 rounded-lg">
-                    <Home className="text-accent-magenta" size={24} />
+                  <div className="p-2.5 bg-accent/10 rounded-lg">
+                    <Home className="text-accent" size={22} />
                   </div>
-                  <h3 className="text-2xl font-bold">Home Automation</h3>
+                  <h3 className="text-2xl font-semibold">Home Automation</h3>
                 </div>
-                <p className="text-text-secondary mb-8">
+                <p className="text-text-secondary mb-8 leading-relaxed">
                   From immersive home theaters to fully automated smart homes,
                   we bring enterprise-grade networking and seamless integration
                   to every room in your house.
@@ -89,10 +89,10 @@ export default function Services() {
                   {homeServices.map((service) => (
                     <li key={service} className="flex items-center gap-3">
                       <Check
-                        size={18}
-                        className="text-accent-magenta flex-shrink-0"
+                        size={16}
+                        className="text-accent flex-shrink-0"
                       />
-                      <span className="text-text-primary">{service}</span>
+                      <span className="text-text-primary text-sm">{service}</span>
                     </li>
                   ))}
                 </ul>

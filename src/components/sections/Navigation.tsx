@@ -7,9 +7,9 @@ import Button from "../ui/Button";
 
 const navLinks = [
   { label: "Home", href: "#" },
-  { label: "Business", href: "#services" },
-  { label: "Home Automation", href: "#services" },
+  { label: "Services", href: "#services" },
   { label: "Expertise", href: "#expertise" },
+  { label: "Process", href: "#process" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
@@ -18,16 +18,15 @@ export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-0.5">
-            <span className="text-2xl font-extrabold text-accent-blue">IT</span>
-            <span className="text-2xl font-extrabold text-accent-purple">
-              Guys
+          <a href="#" className="flex items-center gap-1">
+            <span className="text-xl font-bold text-text-primary tracking-tight">
+              ITGuys
             </span>
-            <span className="text-2xl font-extrabold text-text-muted">.ai</span>
+            <span className="text-xl font-bold text-accent">.ai</span>
           </a>
 
           {/* Desktop links */}
@@ -36,12 +35,12 @@ export default function Navigation() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200"
               >
                 {link.label}
               </a>
             ))}
-            <Button href="#contact" className="text-xs px-4 py-2">
+            <Button href="#contact" className="text-xs px-5 py-2">
               Get Started
             </Button>
           </div>
@@ -64,7 +63,7 @@ export default function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 top-16 bg-background/95 backdrop-blur-xl md:hidden z-40"
+            className="fixed inset-0 top-16 bg-background/98 backdrop-blur-xl md:hidden z-40"
           >
             <div className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link, i) => (
@@ -73,8 +72,8 @@ export default function Navigation() {
                   href={link.href}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  className="text-2xl font-semibold text-text-primary hover:text-accent-purple transition-colors"
+                  transition={{ delay: i * 0.08 }}
+                  className="text-2xl font-medium text-text-primary hover:text-accent transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
@@ -83,7 +82,7 @@ export default function Navigation() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navLinks.length * 0.1 }}
+                transition={{ delay: navLinks.length * 0.08 }}
               >
                 <Button
                   href="#contact"
